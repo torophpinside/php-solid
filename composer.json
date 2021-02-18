@@ -1,0 +1,12 @@
+{
+    "name": "toro/php-solid",
+    "description": "PHP SOLID example",
+    "license": "GNU",
+    "authors": [
+        {
+            "name": "Carlos Toro",
+            "email": "torophpinside@gmail.com"
+        }
+    ],
+    "require": {}
+}
