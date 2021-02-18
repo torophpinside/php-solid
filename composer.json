@@ -10,5 +10,13 @@
     ],
     "require-dev": {
         "phpunit/phpunit": "^9.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Solid\\": "src/",
+            "Solid\\Engine\\": "src/Engine",
+            "Solid\\Executor\\": "src/Executor",
+            "Solid\\Operation\\": "src/Operation"
+        }
     }
 }

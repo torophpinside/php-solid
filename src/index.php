@@ -1,26 +1,13 @@
 <?php
 
 declare(strict_types=1);
+
+require_once __DIR__ .'/../vendor/autoload.php';
+
 // Criar um programa que faca a soma e subtracao de numeros inteiros
 
-function sum($a, $b): int
-{
-    return (int)$a + (int)$b;
-}
+$operation = \Solid\Operation\OperationFactory::getOperation((int)$argv[1], (int)$argv[3], $argv[2]);
 
-function sub($a, $b): int
-{
-    return (int)$a - (int)$b;
-}
-
-function execute($a, $b, $c) {
-    if ($c === '+') {
-        return sum($a, $b);
-    } elseif($c === '-') {
-        return sub($a, $b);
-    }
-
-    return false;
-}
-
-echo execute($argv[1], $argv[3], $argv[2]);
+$calculatorEng = new \Solid\Engine\CalculatorEngine($operation);
+$executor = new \Solid\Executor\Executor($calculatorEng);
+$executor->run();
