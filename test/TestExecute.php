@@ -28,4 +28,20 @@ class TestExecute extends TestCase
         $c = '*';
         $this->assertFalse(execute($a, $b, $c));
     }
+
+    public function testExecuteSumSuccess() {
+        $a = 2;
+        $b = 7;
+        $c = '+';
+
+        $this->assertEquals(9, sum($a, $b));
+    }
+
+    public function testExecuteSubtSuccess() {
+        $a = 4;
+        $b = 8;
+        $c = '-';
+
+        $this->assertEquals(-4, sub($a, $b));
+    }
 }
