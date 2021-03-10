@@ -7,9 +7,9 @@ namespace Solid\Operation;
 class SubOperation extends AbstractOperation implements OperationInterface
 {
     /**
-     * @return int|mixed
+     * @return integer
      */
-    public function execute()
+    public function execute(): int
     {
         return $this->a - $this->b;
     }

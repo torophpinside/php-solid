@@ -7,9 +7,9 @@ namespace Solid\Operation;
 class SumOperation extends AbstractOperation implements OperationInterface
 {
     /**
-     * @return int
+     * @return integer
      */
-    public function execute()
+    public function execute(): int
     {
         return $this->a + $this->b;
     }

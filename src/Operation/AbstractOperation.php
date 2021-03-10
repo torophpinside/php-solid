@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Solid\Operation;
 
-class AbstractOperation
+abstract class AbstractOperation
 {
     protected int $a;
 

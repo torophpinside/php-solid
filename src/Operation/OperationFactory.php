@@ -4,11 +4,19 @@ declare(strict_types=1);
 
 namespace Solid\Operation;
 
+use RuntimeException;
+
 abstract class OperationFactory
 {
-    const SUM_OPERATION = '+';
-    const SUB_OPERATION = '-';
+    private const SUM_OPERATION = '+';
+    private const SUB_OPERATION = '-';
 
+    /**
+     * @param integer $a
+     * @param integer $b
+     * @param string $operation
+     * @return OperationInterface
+     */
     public static function getOperation(int $a, int $b, string $operation): OperationInterface
     {
         if ($operation === self::SUM_OPERATION) {
@@ -18,7 +26,7 @@ abstract class OperationFactory
             return self::getSubOperation($a, $b);
         }
 
-        throw new \RuntimeException('operation not implemented');
+        throw new RuntimeException('operation not implemented');
     }
 
     /**
