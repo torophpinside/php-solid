@@ -10,6 +10,7 @@ abstract class OperationFactory
 {
     private const SUM_OPERATION = '+';
     private const SUB_OPERATION = '-';
+    private const MULTI_OPERATION = '*';
 
     /**
      * @param integer $a
@@ -24,6 +25,9 @@ abstract class OperationFactory
         }
         if ($operation === self::SUB_OPERATION) {
             return self::getSubOperation($a, $b);
+        }
+        if ($operation === self::MULTI_OPERATION) {
+            return self::getMultiOperation($a, $b);
         }
 
         throw new RuntimeException('operation not implemented');
@@ -47,5 +51,15 @@ abstract class OperationFactory
     private static function getSubOperation(int $a, int $b): OperationInterface
     {
         return new SubOperation($a, $b);
+    }
+
+    /**
+     * @param int $a
+     * @param int $b
+     * @return OperationInterface
+     */
+    private static function getMultiOperation(int $a, int $b): OperationInterface
+    {
+        return new MultiplicationOperation($a, $b);
     }
 }
