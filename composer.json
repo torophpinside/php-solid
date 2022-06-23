@@ -16,7 +16,8 @@
             "Solid\\": "src/",
             "Solid\\Engine\\": "src/Engine",
             "Solid\\Executor\\": "src/Executor",
-            "Solid\\Operation\\": "src/Operation"
+            "Solid\\Operation\\": "src/Operation",
+            "Solid\\Exception\\": "src/Executor"
         }
     }
 }
