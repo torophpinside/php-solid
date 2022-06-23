@@ -6,7 +6,7 @@ use Exception;
 
 class ZeroDivisionException extends Exception
 {
-    const DIVISION_BY_ZERO_IS_NOT_ALLOWED_MESSAGE = "Division by zero is not allowed.";
+    public const DIVISION_BY_ZERO_IS_NOT_ALLOWED_MESSAGE = "Division by zero is not allowed.";
 
     public function __construct()
     {
