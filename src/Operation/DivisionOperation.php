@@ -2,16 +2,18 @@
 
 namespace Solid\Operation;
 
+use Solid\Exception\ZeroDivisionException;
+
 class DivisionOperation extends AbstractOperation implements OperationInterface
 {
     /**
-     * @return mixed 
-     * @throws RuntimeException 
+     * @return int
+     * @throws ZeroDivisionException
      */
-    public function execute()
+    public function execute(): int
     {
         if ($this->b === 0) {
-            throw new \RuntimeException("division by zero is not allowed");
+            throw new ZeroDivisionException();
         }
 
         return (int)($this->a / $this->b);
